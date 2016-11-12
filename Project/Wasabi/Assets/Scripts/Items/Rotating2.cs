@@ -1,25 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Rotating : MonoBehaviour {
+public class Rotating2 : MonoBehaviour {
+
 	public float spinSpeed;
 	public ParticleSystem changeEffect;
-	ChangeColorTree treeEffect;
+	ChangeColor2 treeEffect;
 
 	private Rigidbody RB;
 	// Use this for initialization
 	void Start () {
 
 		RB = GetComponent<Rigidbody> ();
-		treeEffect = FindObjectOfType<ChangeColorTree> ();
-	
+		treeEffect = FindObjectOfType<ChangeColor2> ();
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
 		RB.transform.Rotate (Vector3.up * Time.deltaTime *spinSpeed,Space.World);
-	
+
 	}
 
 
