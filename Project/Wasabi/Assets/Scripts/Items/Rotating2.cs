@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class Rotating2 : MonoBehaviour {
 
 	public float spinSpeed;
@@ -34,6 +34,7 @@ public class Rotating2 : MonoBehaviour {
 			gameObject.SetActive (false);
 			Instantiate (changeEffect, transform.position, transform.rotation);
 			treeEffect.StartColorChanging ();
+			//Thankyou ();
 
 
 
@@ -43,6 +44,23 @@ public class Rotating2 : MonoBehaviour {
 
 
 	}
+
+//	public void Thankyou(){
+//
+//		StartCoroutine (StartThankyou ());
+//
+//	}
+//
+//
+//
+//	IEnumerator StartThankyou(){
+//
+//		yield return new WaitForSeconds (8);
+//
+//		SceneManager.LoadScene ("Gameover");
+//
+//
+//	}
 
 
 }
