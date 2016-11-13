@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ChangeColor2 : MonoBehaviour {
+public class BigColorChange : MonoBehaviour {
 
 	public GameObject[] TreeColor;
-    private List<Animator> smallTree;
+	private List<Animator> smallTree;
 
 
 
@@ -44,8 +44,8 @@ public class ChangeColor2 : MonoBehaviour {
 	IEnumerator SetTreeColor(){
 		yield return new WaitForSeconds (1);
 
-	
-	
+
+
 		for (int i = 0; i < TreeColor.Length; i++) {
 
 			TreeColor [i].GetComponent<Animator> ().SetBool ("SetColor", true);

@@ -32,7 +32,7 @@ public class ChangeColorTree : MonoBehaviour {
 
 
 	IEnumerator SetTreeColor(){
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (.5f);
 		anim.SetBool ("SetColor", true);
 		tree1.SetBool ("SetColor", true);
 		tree2.SetBool ("SetColor", true);

@@ -4,7 +4,9 @@ using System.Collections;
 public class Rotating : MonoBehaviour {
 	public float spinSpeed;
 	public ParticleSystem changeEffect;
+	public GameObject Button2;
 	ChangeColorTree treeEffect;
+
 
 	private Rigidbody RB;
 	// Use this for initialization
@@ -12,6 +14,7 @@ public class Rotating : MonoBehaviour {
 
 		RB = GetComponent<Rigidbody> ();
 		treeEffect = FindObjectOfType<ChangeColorTree> ();
+
 	
 	}
 	
@@ -33,6 +36,8 @@ public class Rotating : MonoBehaviour {
 			gameObject.SetActive (false);
 			Instantiate (changeEffect, transform.position, transform.rotation);
 			treeEffect.StartColorChanging ();
+			Button2.SetActive (true);
+
 
 
 

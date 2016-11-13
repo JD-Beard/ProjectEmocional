@@ -9,7 +9,7 @@ public class RandomSpawn : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		Invoke ("Spawn", 5);
+	
 	
 	}
 	
@@ -18,7 +18,7 @@ public class RandomSpawn : MonoBehaviour {
 	
 	}
 
-	void Spawn(){
+	public void Spawn(){
 
 		int spawnIndex = Random.Range (0, spawnPoints.Length);
 		Instantiate (Trump, spawnPoints [spawnIndex].position, spawnPoints [spawnIndex].rotation);

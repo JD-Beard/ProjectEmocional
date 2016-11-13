@@ -21,7 +21,7 @@ public class EnemyPatrol : MonoBehaviour {
 		float dist = Vector3.Distance (path [currentPoint].position, transform.position);
 		transform.position = Vector3.Lerp (transform.position, path[currentPoint].position,Time.deltaTime * speed);
 		transform.LookAt (path[currentPoint].position);
-		enemyAnim.SetBool ("Walking", true);
+		enemyAnim.SetBool ("StartWalking", true);
 	
 
 		if (dist <= reachDist){//dir.magnitude <= reachDist) {
