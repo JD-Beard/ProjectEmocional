@@ -41,12 +41,13 @@ ModelImporter:
     4300010: pTorus2
     7400000: Take 001
     9500000: //RootNode
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
-    legacyGenerateAnimations: 4
+    legacyGenerateAnimations: 3
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
@@ -55,11 +56,11 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
-    animationWrapMode: 0
+    animationWrapMode: 2
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
@@ -67,11 +68,11 @@ ModelImporter:
       takeName: Take 001
       firstFrame: 1
       lastFrame: 200
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
-      loop: 0
+      loop: 1
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0
@@ -132,7 +133,47 @@ ModelImporter:
   copyAvatar: 0
   humanDescription:
     human: []
-    skeleton: []
+    skeleton:
+    - name: groundCreature_01(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: group
+      position: {x: 0.44975057, y: 1.8989547, z: 0.9112129}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__pSphere2
+      position: {x: -0.000000029802322, y: 0, z: 0.000000059604645}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.19600484, y: 0.19600484, z: 0.19600484}
+      transformModified: 1
+    - name: pCylinder1
+      position: {x: -0, y: 1.1016253, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pSphere1
+      position: {x: -0, y: 2.1056557, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pSphere2
+      position: {x: -0.45024943, y: 1.8989547, z: 0.911213}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.19600484, y: 0.19600484, z: 0.19600484}
+      transformModified: 1
+    - name: pTorus1
+      position: {x: -0, y: 1.2321204, z: 1.0055611}
+      rotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+      scale: {x: 0.28784785, y: 0.28784785, z: 0.20239034}
+      transformModified: 1
+    - name: pTorus2
+      position: {x: -0, y: 3.4553103, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.4389807, y: 0.19450481, z: 0.4389807}
+      transformModified: 1
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -143,7 +184,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

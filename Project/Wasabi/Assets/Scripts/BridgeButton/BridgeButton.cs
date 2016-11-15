@@ -5,18 +5,18 @@ public class BridgeButton : MonoBehaviour {
 
 
 	public Animator buttonTrigger;
-	private BridgeRise BR;
+	//public GameObject BR;
+	BridgeRise Rise;
+	public AudioSource EF;
+	bool IsOn = false;
 
 	// Use this for initialization
 	void Start () {
 
 		buttonTrigger = GetComponent<Animator> ();
-		BR = GameObject.FindObjectOfType<BridgeRise> ();
-	
-	
-	}
-	
+		Rise = GameObject.Find ("Bridge").GetComponent<BridgeRise> ();
 	// Update is called once per frame
+	}
 	void Update () {
 	
 	}
@@ -27,11 +27,15 @@ public class BridgeButton : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 
-		if(other.gameObject.tag == "Player"){
+		if(other.gameObject.CompareTag("Player")){
 
+			if (IsOn == false) {
+				buttonTrigger.SetBool ("SetTrigger", true);
+				EF.Play ();
+				Rise.MoveUp ();
+				IsOn = true;
 
-			buttonTrigger.SetBool ("SetTrigger", true);
-			BR.MoveUp ();
+			}
 		
 		}
 

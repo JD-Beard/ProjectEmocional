@@ -48,12 +48,13 @@ ModelImporter:
     4300012: pasted__pCone1
     7400000: Take 001
     9500000: //RootNode
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
-    legacyGenerateAnimations: 4
+    legacyGenerateAnimations: 3
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
@@ -62,13 +63,61 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
-    animationWrapMode: 0
+    animationWrapMode: 2
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 200
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: group
+        weight: 1
+      - path: group/pasted__pSphere2
+        weight: 1
+      - path: group1
+        weight: 1
+      - path: group1/pasted__pCone1
+        weight: 1
+      - path: pCone1
+        weight: 1
+      - path: pCylinder1
+        weight: 1
+      - path: pSphere1
+        weight: 1
+      - path: pSphere2
+        weight: 1
+      - path: pTorus1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -95,7 +144,57 @@ ModelImporter:
   copyAvatar: 0
   humanDescription:
     human: []
-    skeleton: []
+    skeleton:
+    - name: groundCreature_02(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: group
+      position: {x: 0.44975057, y: 1.8989547, z: 0.9112129}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__pSphere2
+      position: {x: -0.000000029802322, y: 0, z: 0.13416505}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.21513417, y: 0.10787754, z: 0.21513417}
+      transformModified: 1
+    - name: group1
+      position: {x: -0.6999999, y: 3.1828876, z: -0.00000004571179}
+      rotation: {x: 0, y: 0, z: 0.57357645, w: 0.81915206}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__pCone1
+      position: {x: -0.000000059604645, y: 0, z: 0.00000004571179}
+      rotation: {x: 0, y: -0, z: -0.3007058, w: 0.95371693}
+      scale: {x: 0.38487792, y: 0.7774569, z: 0.38487792}
+      transformModified: 1
+    - name: pCone1
+      position: {x: 0.7, y: 3.1828876, z: 0}
+      rotation: {x: 0, y: -0, z: -0.3007058, w: 0.95371693}
+      scale: {x: 0.38487792, y: 0.78452975, z: 0.38487792}
+      transformModified: 1
+    - name: pCylinder1
+      position: {x: -0, y: 1.1390111, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0975962, y: 1.0975962, z: 1.0975962}
+      transformModified: 1
+    - name: pSphere1
+      position: {x: -0, y: 2.2350726, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0975962, y: 1.0975962, z: 1.0975962}
+      transformModified: 1
+    - name: pSphere2
+      position: {x: -0.45024943, y: 1.8989547, z: 1.045378}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.21513417, y: 0.10787754, z: 0.21513417}
+      transformModified: 1
+    - name: pTorus1
+      position: {x: -0, y: 1.2321204, z: 1.0055611}
+      rotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+      scale: {x: 0.28784785, y: 0.28784785, z: 0.11142435}
+      transformModified: 1
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -106,7 +205,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

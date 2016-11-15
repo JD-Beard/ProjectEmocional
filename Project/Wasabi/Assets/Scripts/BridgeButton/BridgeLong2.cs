@@ -27,7 +27,7 @@ public class BridgeLong2 : MonoBehaviour {
 
 	IEnumerator StartBridge(){
 
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (.5f);
 		bridgeUp.SetBool ("SetBridge", true);
 
 

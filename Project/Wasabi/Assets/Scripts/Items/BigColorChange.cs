@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class BigColorChange : MonoBehaviour {
 
@@ -43,14 +44,18 @@ public class BigColorChange : MonoBehaviour {
 
 	IEnumerator SetTreeColor(){
 		yield return new WaitForSeconds (1);
-
-
-
-		for (int i = 0; i < TreeColor.Length; i++) {
-
-			TreeColor [i].GetComponent<Animator> ().SetBool ("SetColor", true);
+		foreach (Animator a in smallTree) {
+			a.SetBool ("SetColor", true);
 		}
+//		for (int i = 0; i < TreeColor.Length; i++) {
+//
+//			TreeColor [i].GetComponent<Animator> ().SetBool ("SetColor", true);
+//		}
 
+		yield return new WaitForSeconds (6);
+
+
+		SceneManager.LoadScene ("Gameover");
 
 	}
 
