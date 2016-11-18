@@ -13,7 +13,7 @@ public class Rotating3 : MonoBehaviour {
 		// Use this for initialization
 		void Start () {
 
-			RB = GetComponent<Rigidbody> ();
+		RB = GetComponent<Rigidbody> ();
 		treeEffect = FindObjectOfType<BigColorChange> ();
 
 		}
@@ -31,7 +31,7 @@ public class Rotating3 : MonoBehaviour {
 		void OnCollisionEnter(Collision other){
 
 
-			if (other.collider.gameObject.tag == "Player") {
+		if (other.collider.gameObject.CompareTag ("Player")) {
 
 				gameObject.SetActive (false);
 				Instantiate (changeEffect, transform.position, transform.rotation);

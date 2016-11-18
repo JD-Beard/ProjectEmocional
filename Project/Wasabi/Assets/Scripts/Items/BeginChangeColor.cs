@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class BeginChangeColor : MonoBehaviour {
+
 	public GameObject[] TreeColor;
 	private List<Animator> smallTree;
 
@@ -41,14 +42,16 @@ public class BeginChangeColor : MonoBehaviour {
 
 
 	IEnumerator SetTreeColor(){
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (.5f);
 
-
-
-		for (int i = 0; i < TreeColor.Length; i++) {
-
-			TreeColor [i].GetComponent<Animator> ().SetBool ("SetColor", true);
+		foreach (Animator a in smallTree) {
+			a.SetBool ("SetColor", true);
 		}
+
+//		for (int i = 0; i < TreeColor.Length; i++) {
+//
+//			TreeColor [i].GetComponent<Animator> ().SetBool ("SetColor", true);
+//		}
 
 
 	}

@@ -31,15 +31,12 @@ public class Rotating2 : MonoBehaviour {
 	void OnCollisionEnter(Collision other){
 
 
-		if (other.collider.gameObject.tag == "Player") {
+		if (other.collider.gameObject.CompareTag("Player")) {
 
 			gameObject.SetActive (false);
 			Instantiate (changeEffect, transform.position, transform.rotation);
 			treeEffect.StartColorChanging ();
 			islandEffect.StartTheRise ();
-			//Thankyou ();
-
-
 
 		}
 
@@ -48,22 +45,6 @@ public class Rotating2 : MonoBehaviour {
 
 	}
 
-//	public void Thankyou(){
-//
-//		StartCoroutine (StartThankyou ());
-//
-//	}
-//
-//
-//
-//	IEnumerator StartThankyou(){
-//
-//		yield return new WaitForSeconds (8);
-//
-//		SceneManager.LoadScene ("Gameover");
-//
-//
-//	}
 
 
 }

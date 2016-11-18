@@ -43,7 +43,7 @@ public class BigColorChange : MonoBehaviour {
 
 
 	IEnumerator SetTreeColor(){
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (.8f);
 		foreach (Animator a in smallTree) {
 			a.SetBool ("SetColor", true);
 		}

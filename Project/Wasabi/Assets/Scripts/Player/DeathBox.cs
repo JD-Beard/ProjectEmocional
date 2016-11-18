@@ -20,7 +20,7 @@ public class DeathBox : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 
-		if(other.gameObject.tag == "Player"){
+		if(other.gameObject.CompareTag("Player")){
 
 
 			SceneManager.LoadScene ("Level01");
