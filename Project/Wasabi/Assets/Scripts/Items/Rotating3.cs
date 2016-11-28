@@ -7,6 +7,7 @@ public class Rotating3 : MonoBehaviour {
 
 		public float spinSpeed;
 		public ParticleSystem changeEffect;
+	    public GameObject NPC4Wolf;
 	    BigColorChange treeEffect;
 
 		private Rigidbody RB;
@@ -36,6 +37,7 @@ public class Rotating3 : MonoBehaviour {
 				gameObject.SetActive (false);
 				Instantiate (changeEffect, transform.position, transform.rotation);
 				treeEffect.StartColorChanging ();
+			    NPC4Wolf.SetActive (true);
 			
 
 

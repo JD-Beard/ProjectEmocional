@@ -29,7 +29,7 @@ public class IslandRise : MonoBehaviour {
 
 	IEnumerator Rise(){
 
-		yield return new WaitForSeconds (5);
+		yield return new WaitForSeconds (.5f);
 
 		risingIsland.SetBool ("SetBridge", true);
 

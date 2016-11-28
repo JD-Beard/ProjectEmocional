@@ -4,7 +4,7 @@ using System.Collections;
 public class Rotating : MonoBehaviour {
 	public float spinSpeed;
 	public ParticleSystem changeEffect;
-	public GameObject Button2;
+	public GameObject NPC2Wolf;
 	ChangeColorTree treeEffect;
 
 
@@ -36,7 +36,7 @@ public class Rotating : MonoBehaviour {
 			gameObject.SetActive (false);
 			Instantiate (changeEffect, transform.position, transform.rotation);
 			treeEffect.StartColorChanging ();
-			Button2.SetActive (true);
+			NPC2Wolf.SetActive (true);
 
 
 

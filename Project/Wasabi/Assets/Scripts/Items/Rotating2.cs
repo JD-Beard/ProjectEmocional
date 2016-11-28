@@ -5,8 +5,10 @@ public class Rotating2 : MonoBehaviour {
 
 	public float spinSpeed;
 	public ParticleSystem changeEffect;
+	public GameObject NPC3Wolf;
 	BeginChangeColor treeEffect;
-	IslandRise islandEffect;
+	//IslandRise islandEffect;
+
 
 	private Rigidbody RB;
 	// Use this for initialization
@@ -14,7 +16,7 @@ public class Rotating2 : MonoBehaviour {
 
 		RB = GetComponent<Rigidbody> ();
 		treeEffect = FindObjectOfType<BeginChangeColor> ();
-		islandEffect = FindObjectOfType<IslandRise> ();
+		//islandEffect = FindObjectOfType<IslandRise> ();
 
 	}
 
@@ -36,7 +38,8 @@ public class Rotating2 : MonoBehaviour {
 			gameObject.SetActive (false);
 			Instantiate (changeEffect, transform.position, transform.rotation);
 			treeEffect.StartColorChanging ();
-			islandEffect.StartTheRise ();
+			//islandEffect.StartTheRise ();
+			NPC3Wolf.SetActive (true);
 
 		}
 

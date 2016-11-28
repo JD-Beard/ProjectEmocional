@@ -52,10 +52,10 @@ public class BigColorChange : MonoBehaviour {
 //			TreeColor [i].GetComponent<Animator> ().SetBool ("SetColor", true);
 //		}
 
-		yield return new WaitForSeconds (6);
+		//yield return new WaitForSeconds (6);
 
 
-		SceneManager.LoadScene ("Gameover");
+		//SceneManager.LoadScene ("Gameover");
 
 	}
 
