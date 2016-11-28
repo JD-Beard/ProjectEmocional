@@ -13,11 +13,14 @@ using System.Collections.Generic;
 		public float yMinLimit = -20f;
 		public float yMaxLimit = 80f;
 
+	    public float smoothTime = 2f;
+
 		public float distanceMin = .5f;
-		public float distanceMax = 15f;
-		private Rigidbody rigidbody;
+	    public float distanceMax = 15f;
+	    private Rigidbody RB;
 		float x = 0.0f;
 		float y = 0.0f;
+
 	  
 
 
@@ -30,12 +33,12 @@ using System.Collections.Generic;
 			x = angles.y;
 			y = angles.x;
 
-			rigidbody = GetComponent<Rigidbody>();
+			RB = GetComponent<Rigidbody>();
 
 			// Make the rigid body not change rotation
-			if (rigidbody != null)
+			if (RB != null)
 			{
-				rigidbody.freezeRotation = true;
+				RB.freezeRotation = true;
 			}
 		}
 
@@ -56,14 +59,14 @@ using System.Collections.Generic;
 		{
 			if (target) 
 			{
-				x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
+			    x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
 				y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
 
 				y = ClampAngle(y, yMinLimit, yMaxLimit);
 
 				Quaternion rotation = Quaternion.Euler(y, x, 0);
 
-				distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel")*5, distanceMin, distanceMax);
+				//distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel")*5, distanceMin, distanceMax);
 
 				RaycastHit hit;
 				if (Physics.Linecast (target.position, transform.position, out hit)) 
