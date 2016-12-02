@@ -11,10 +11,13 @@ public class DialogManager : MonoBehaviour {
 	public string[] textLines;
 	public int currentLine;
 	public int endAtLine;
+	public UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter ThirdPersonControl;
 
 	// Use this for initialization
 	void Start () {
 
+
+		ThirdPersonControl = GameObject.FindGameObjectWithTag("Player").GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter> ();
 	
 
 		if (textFile != null) {
@@ -44,6 +47,11 @@ public class DialogManager : MonoBehaviour {
 			textBox.SetActive (false);
 			bridgeSwitch.SetActive (true);
 			currentLine = 0;
+			ThirdPersonControl.m_MoveSpeedMultiplier = 8f;
+			ThirdPersonControl.m_MovingTurnSpeed= 360f;
+			ThirdPersonControl.m_StationaryTurnSpeed = 180f;
+			ThirdPersonControl.m_JumpPower = 8f;
+			ThirdPersonControl.canMove = true;
 
 		}
 

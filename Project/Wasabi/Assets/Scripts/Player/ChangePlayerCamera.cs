@@ -38,6 +38,7 @@ public class ChangePlayerCamera : MonoBehaviour {
 			ThirdPersonControl.m_MoveSpeedMultiplier = 0f;
 			ThirdPersonControl.m_MovingTurnSpeed= 0f;
 			ThirdPersonControl.m_StationaryTurnSpeed = 0f;
+			ThirdPersonControl.m_JumpPower = 0f;
 
 		
 
@@ -52,6 +53,8 @@ public class ChangePlayerCamera : MonoBehaviour {
 			ThirdPersonControl.m_MoveSpeedMultiplier = 8f;
 			ThirdPersonControl.m_MovingTurnSpeed= 360f;
 			ThirdPersonControl.m_StationaryTurnSpeed = 180f;
+			ThirdPersonControl.m_JumpPower = 8f;
+
 
 
 		}
