@@ -9,8 +9,8 @@ public class NPCDialog : MonoBehaviour {
 	bool talkingIsOn = false;
 	bool pressXToTalk = false;
 	private DialogManager DManager;
-	public UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter ThirdPersonControl;
-	//public GameObject Player;
+	//public UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter ThirdPersonControl;
+
 
 
 
@@ -20,8 +20,8 @@ public class NPCDialog : MonoBehaviour {
 	void Start () {
 
 		DManager = GameObject.FindGameObjectWithTag ("GameUI").GetComponent<DialogManager> ();
-		ThirdPersonControl = GameObject.FindGameObjectWithTag("Player").GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter> ();
-		//Player = GameObject.FindGameObjectWithTag("Player").GetComponent<UnityStandardAssets
+		//ThirdPersonControl = GameObject.FindGameObjectWithTag("Player").GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter> ();
+	
 
 
 	
@@ -67,11 +67,11 @@ public class NPCDialog : MonoBehaviour {
 				dialog [0].SetActive (false);
 				dialog [1].SetActive (true); 
 				pressXToTalk = true;
-				ThirdPersonControl.m_MoveSpeedMultiplier = 0f;
-				ThirdPersonControl.m_MovingTurnSpeed= 0f;
-				ThirdPersonControl.m_StationaryTurnSpeed = 0f;
-				ThirdPersonControl.m_JumpPower = 0f;
-				ThirdPersonControl.canMove = false;
+//				ThirdPersonControl.m_MoveSpeedMultiplier = 0f;
+//				ThirdPersonControl.m_MovingTurnSpeed= 0f;
+//				ThirdPersonControl.m_StationaryTurnSpeed = 0f;
+//				ThirdPersonControl.m_JumpPower = 0f;
+//				ThirdPersonControl.canMove = false;
 
 
 
