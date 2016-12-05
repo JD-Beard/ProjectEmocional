@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class AnimationScene : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class AnimationScene : MonoBehaviour {
 	public Animator scAnim;
 	WolfDisappers disappers;
 	public UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter THPlayer;
+	bool isOn = false;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +32,21 @@ public class AnimationScene : MonoBehaviour {
 
 	}
 
+	public void LoadScene(){
+
+		StartCoroutine (StartScene ());
+
+	}
+
+
+	IEnumerator StartScene(){
+
+		yield return new WaitForSeconds (2.5f);
+		SceneManager.LoadScene ("Level01");
+
+
+	}
+
 
 	IEnumerator TurnCamera(){
 
@@ -43,17 +60,23 @@ public class AnimationScene : MonoBehaviour {
 
 
 
+
+
+
 	void OnTriggerEnter(Collider other){
 
 		if (other.gameObject.CompareTag ("Player")) {
 
-			playerCamera.SetActive (false);
-			sceneCamera.SetActive (true);
-			scAnim.SetBool ("StartCamera", true);
-			THPlayer.canMove = false;
-			disappers.StartAction ();
+			if (isOn == false) {
+				playerCamera.SetActive (false);
+				sceneCamera.SetActive (true);
+				scAnim.SetBool ("StartCamera", true);
+				THPlayer.canMove = false;
+				disappers.StartAction ();
+				isOn = true;
 
 
+			}
 		}
 
 

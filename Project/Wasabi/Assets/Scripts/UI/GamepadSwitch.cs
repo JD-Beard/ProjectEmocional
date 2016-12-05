@@ -14,7 +14,7 @@ public class GamepadSwitch : MonoBehaviour {
 
 
 		if (Input.GetKeyDown (KeyCode.Joystick1Button0)) {
-			SceneManager.LoadScene ("Level01");
+			SceneManager.LoadScene ("Level00");
 
 		}
 
