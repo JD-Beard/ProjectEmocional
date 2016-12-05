@@ -4,8 +4,10 @@ using System.Collections;
 public class BridgeButton1 : MonoBehaviour {
 
 	public Animator buttonTrigger;
-	BridgeLong BRL;
-	BridgeLong2 BRL2;
+	public GameObject Bridge1;
+	public GameObject Bridge2;
+	public BridgeLong BRL;
+	public BridgeLong2 BRL2;
 	public AudioSource EF;
 	bool isOn = false;
 
@@ -13,9 +15,9 @@ public class BridgeButton1 : MonoBehaviour {
 	void Start () {
 
 		buttonTrigger = GetComponent<Animator> ();
-		BRL= GameObject.Find ("BridgeLong").GetComponent<BridgeLong> ();
-		BRL2= GameObject.Find ("BridgeLong2").GetComponent<BridgeLong2> ();
-
+	//	BRL= GameObject.Find ("BridgeLong").GetComponent<BridgeLong> ();
+		//BRL2= GameObject.Find ("BridgeLong2").GetComponent<BridgeLong2> ();
+	
 
 	}
 
@@ -34,9 +36,11 @@ public class BridgeButton1 : MonoBehaviour {
 
 			if (isOn == false) {
 				buttonTrigger.SetBool ("SetTrigger", true);
+				Bridge1.SetActive (true);
+				Bridge2.SetActive (true);
+				EF.Play ();
 				BRL.MoveUp ();
 				BRL2.MoveUp ();
-				EF.Play ();
 				isOn = true;
 			}
 

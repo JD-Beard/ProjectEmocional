@@ -9,6 +9,8 @@ public class BridgeRise : MonoBehaviour {
 	void Start () {
 
 		bridgeUp = GetComponent<Animator> ();
+
+
 	
 	}
 	
@@ -28,7 +30,7 @@ public class BridgeRise : MonoBehaviour {
 
 	IEnumerator StartBridge(){
 
-		yield return new WaitForSeconds (.5f);
+		yield return new WaitForSeconds (.8f);
 		bridgeUp.SetBool ("SetBridge", true);
 
 

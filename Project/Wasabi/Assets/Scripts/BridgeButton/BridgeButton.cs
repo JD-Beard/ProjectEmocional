@@ -5,19 +5,31 @@ public class BridgeButton : MonoBehaviour {
 
 
 	public Animator buttonTrigger;
-	//public GameObject BR;
-	BridgeRise Rise;
+	public GameObject Bridge;
+	public BridgeRise Rise;
 	public AudioSource EF;
+	public bool switchOn = false;
 	bool IsOn = false;
 
 	// Use this for initialization
 	void Start () {
 
 		buttonTrigger = GetComponent<Animator> ();
-		Rise = GameObject.Find ("Bridge").GetComponent<BridgeRise> ();
+		//Rise = GameObject.FindGameObjectWithTag ("Bridge").GetComponent<BridgeRise> ();
+
+	
 	// Update is called once per frame
 	}
 	void Update () {
+
+
+	
+	
+
+
+
+
+
 	
 	}
 
@@ -32,6 +44,7 @@ public class BridgeButton : MonoBehaviour {
 			if (IsOn == false) {
 				buttonTrigger.SetBool ("SetTrigger", true);
 				EF.Play ();
+				Bridge.SetActive (true);
 				Rise.MoveUp ();
 				IsOn = true;
 
