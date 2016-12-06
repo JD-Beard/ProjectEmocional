@@ -41,7 +41,7 @@ public class AnimationScene : MonoBehaviour {
 
 	IEnumerator StartScene(){
 
-		yield return new WaitForSeconds (2.5f);
+		yield return new WaitForSeconds (1f);
 		SceneManager.LoadScene ("Level01");
 
 
@@ -50,7 +50,7 @@ public class AnimationScene : MonoBehaviour {
 
 	IEnumerator TurnCamera(){
 
-		yield return new WaitForSeconds (.2f);
+		yield return new WaitForSeconds (3f);
 		sceneCamera.SetActive (false);
 		playerCamera.SetActive (true);
 		THPlayer.canMove = true;

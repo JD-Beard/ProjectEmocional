@@ -6,7 +6,9 @@ public class WolfDisappers : MonoBehaviour {
 
 	public ParticleSystem PSEffect;
 	public GameObject PortalCrystal;
+	public Transform posForEffect;
 	AnimationScene animScene;
+
 
 	// Use this for initialization
 	void Start () {
@@ -34,7 +36,7 @@ public class WolfDisappers : MonoBehaviour {
 
 
 		yield return new WaitForSeconds (1f);
-		Instantiate (PSEffect, transform.position, transform.rotation);
+		Instantiate (PSEffect, posForEffect.transform.position, posForEffect.transform.rotation);
 
 		yield return new WaitForSeconds (5f);
 		animScene.BringplayerCamera ();
