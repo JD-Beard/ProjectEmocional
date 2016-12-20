@@ -130,7 +130,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (canMove == true) {
 				// update the animator parameters
 				m_Animator.SetFloat ("Forward", m_ForwardAmount, 0.1f, Time.deltaTime);
-				m_Animator.SetFloat ("Turn", m_TurnAmount, 50f, Time.deltaTime);
+				m_Animator.SetFloat ("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
 				m_Animator.SetBool ("Crouch", m_Crouching);
 				m_Animator.SetBool ("OnGround", m_IsGrounded);
 				if (!m_IsGrounded) {
@@ -176,8 +176,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (jump && !crouch && m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded"))
 			{
 				// jump!
-				m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x * 2, m_JumpPower, m_Rigidbody.velocity.z);
-				transform.Translate (Vector3.forward * Time.deltaTime * 40);
+				m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z*0.1f * Time.deltaTime);
+				//transform.Translate (Vector3.forward * Time.deltaTime * 40);
 				m_IsGrounded = false;
 				m_Animator.applyRootMotion = false;
 				m_GroundCheckDistance = 0.1f;
